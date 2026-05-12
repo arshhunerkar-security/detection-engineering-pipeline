@@ -1,0 +1,14 @@
+title: Suspicious Service Creation
+status: stable
+
+logsource:
+ category: process_creation
+
+detection:
+ selection:
+   CommandLine|contains:
+     - "sc create"
+
+condition: selection
+
+level: high
